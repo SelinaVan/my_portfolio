@@ -1,4 +1,8 @@
 $(document).ready(function () {
+    const API_URL = 'https://portfolio-backend-kdud.onrender.com/projects';
+    //render function when load page
+    callApiGetAllProjects()
+
     // set background light when scroll follow the height over 20
     $(window).scroll(function () {
         if (this.scrollY > 20) {
@@ -61,7 +65,38 @@ $(document).ready(function () {
   
         })
     }
-
+    // render project dynamic
+    function renderProject(paramData) {
+        const project = paramData.map(item => {
+            return `
+                <a href=${item.link} class="work" target="_blank">
+                    <img src=${item.image} alt=${item.title}>
+                    <div class="info">
+                        <h3>${item.title}</h3>
+                        <div class="cat">${item.name}</div>
+                        <div class="cat">${item.description}</div>
+                        <div class="cat">Click to see...</div>
+                    </div>
+                </a>
+        `
+        })
+        $('#works-inner').append(project)
+    }
+    // function call api get data
+    function callApiGetAllProjects() {
+        $.ajax({
+            type: 'GET',
+            url: API_URL,
+            dataType: 'json',
+            async: false,
+            success: function (res) {
+                renderProject(res)
+            },
+            error: function (err){
+               
+            }
+        })
+    }
 })
  /// make the photo with popup effect
     // $('.works').magnificPopup({
