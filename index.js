@@ -42,8 +42,8 @@ $(document).ready(function () {
    
     // function download cv
     $('.download_cv').click(function () {
-        const fileName = 'Frontend developer - Van Ngoc Phuong.pdf'
-        const filePath = './Frontend developer - Van Ngoc Phuong.pdf'
+        const fileName = 'CV_Van_Ngoc_Phuong_Fullstack_Developer.pdf'
+        const filePath = './CV_Van_Ngoc_Phuong_Fullstack_Developer.pdf'
         const link = document.createElement('a')
         link.setAttribute('href', fileName)
         link.setAttribute('download', filePath)
