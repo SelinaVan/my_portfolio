@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal website</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"
+        integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--Add popup-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
+    <script src="./index.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("LXTb8monY8lvhV9Wf");
+        })();
+    </script>
+</head>
+
+<body>
+    <!--nav bar-->
+    <nav class="navbar ">
+        <div class="inner-width">
+            <a href="/" class="logo"></a>
+            <button class="menu-toggle ">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="navbar-menu ">
+                <a href="#">Home</a>
+                <a href="#about">About</a>
+                <!-- <a href="#services">Services</a> -->
+                <a href="#education">Education</a>
+                <a href="#works">Works</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+    </nav>
+    <!--Home-->
+    <section id="home">
+        <div class="inner-width">
+            <div class="content">
+                <h1>Hi I'm </h1>
+                <div class="sm">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+                <div class="buttons">
+                    <a href="tel: 0909489406">Contact Me</a>
+                    <a href="#" class="download_cv">Download CV</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--about-->
+    <section id="about">
+        <div class="inner-width">
+            <h1 class="section-title">About</h1>
+            <div class="about-content">
+                <img src="https://storage.googleapis.com/shop24h-7d406.appspot.com/images/87463F39-E89C-4F38-8DD8-0728014698CB_1876bed3-9f42-4166-b181-b41abec9f64e.jpg?GoogleAccessId=firebase-adminsdk-rygp4%40shop24h-7d406.iam.gserviceaccount.com&Expires=1742169600&Signature=WZRMf7F41eL2Y4RviWjq9TOw%2F3QKCKsof8FWaEPPZwOYMPzcjhsflZSCVQRZB36gFHgcNsWHrJ%2FTmMZ3Ujhje0yYLYUKk%2BRPa%2BVSrVZp5ZpIwwcEJhMTjJJtO5ByMIE5CcV%2BEmr9yEkh7mtZY%2FarUYONTQK%2BGugZ0u8xqrmONLdkLtBtWv3G%2Fn7Xl1QJM%2FPgaIho8TxPpN3osXwRfos%2FFvaTALnkc6%2FnzlEIrsspQmXpvUir6v5N52Isc39XSMxf%2BtsjrzAzDAeuWXHuFHJ%2BySuYsMeLeHxapB1fVKmiSTuliblGL2hQoGSdsx0ctH0%2F0qV%2BUH1FgySu%2FJbhqNLM%2BQ%3D%3D"
+                    alt="" class="about-pic">
+                <div class="about-text">
+                    <h2>I'm Van Ngoc Phuong</h2>
+                    <h3>
+                        <span>Web Developer</span>
+                    </h3>
+                    <p>To obtain a position as a Frontend Developer where I can utilize my skills and knowledge in
+                        Javascript to build
+                        interactive and user-friendly web development.</p>
+                </div>
+            </div>
+            <div class="skills">
+                <div class="skill">
+                    <div class="skill-info">
+                        <span>HTML</span>
+                        <span>90%</span>
+                    </div>
+                    <div class="skill-bar html" data-width="90%"></div>
+                </div>
+                <div class="skill">
+                    <div class="skill-info">
+                        <span>CSS</span>
+                        <span>80%</span>
+                    </div>
+                    <div class="skill-bar css" data-width="80%"></div>
+                </div>
+                <div class="skill">
+                    <div class="skill-info">
+                        <span>JAVASCRIPT</span>
+                        <span>80%</span>
+                    </div>
+                    <div class="skill-bar javascript" data-width="80%"></div>
+                </div>
+                <div class="skill">
+                    <div class="skill-info">
+                        <span>ReactJs</span>
+                        <span>80%</span>
+                    </div>
+                    <div class="skill-bar reactjs" data-width="80%"></div>
+                </div>
+                <div class="skill">
+                    <div class="skill-info">
+                        <span>Bootstrap</span>
+                        <span>80%</span>
+                    </div>
+                    <div class="skill-bar bootstrap" data-width="80%"></div>
+                </div>
+                <div class="skill">
+                    <div class="skill-info">
+                        <span>Jquery</span>
+                        <span>80%</span>
+                    </div>
+                    <div class="skill-bar jquery" data-width="80%"></div>
+                </div>
+
+
+            </div>
+    </section>
+    <!--Services-->
+    <!-- <section id="services" class="dark">
+        <div class="inner-width">
+            <h1 class="section-title">Services</h1>
+            <div class="services">
+                <div class="service">
+                    <i class="fa-sharp fa-solid fa-paintbrush icon"></i>
+                    <h4>Design</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, maxime.</p>
+                </div>
+                <div class="service">
+                    <i class="fa-sharp fa-solid fa-pager icon"></i>
+                    <h4>Build a website</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, maxime.</p>
+                </div>
+                <div class="service">
+                    <i class="fa-sharp fa-solid fa-database icon"></i>
+                    <h4>Manage Database</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, maxime.</p>
+                </div>
+                <div class="service">
+                    <i class="fa-sharp fab fa-android icon"></i>
+                    <h4>Android Apps</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, maxime.</p>
+                </div>
+                <div class="service">
+                    <i class="fa-sharp fa-solid fa-paintbrush icon"></i>
+                    <h4>UI Design</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, maxime.</p>
+                </div>
+                <div class="service">
+                    <i class="fa-sharp fa-solid fa-keyboard icon"></i>
+                    <h4>Edit Text</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, maxime.</p>
+                </div>
+            </div>
+        </div>
+    </section> -->
+    <!--Education-->
+    <section id="education">
+        <div class="inner-width">
+            <h1 class="section-title">Education & Experiences</h1>
+            <div class="time-line">
+                <div class="block">
+                    <h4>2022 - 2023</h4>
+                    <h3>Study web developer</h3>
+                    <p>Study new web developer at Ironhack VietNam</p>
+                    <p>Developed a responsive e-commerce website using HTML, CSS, Javascript, ReactJS</p>
+                    <p>Understanding RESTFul API</p>
+                    <p>Familiarity with some library such as MUI, Bootstrap, ReactJS, Jquery/p>
+                </div>
+                <div class="block">
+                    <h4>2020 - 2022</h4>
+                    <h3>Project Manager</h3>
+                    <p>Work directly with Customers's about all information related to the projects</p>
+                    <p>Received shoes technical and deploy them to the team...</p>
+
+                </div>
+                <div class="block">
+                    <h4>2017 - 2019</h4>
+                    <h3>Admin and HR</h3>
+                    <p>Manage administrative and paperword at the office...</p>
+                    <p>Tracking timekeeping, day-off and implement employees's policies...</p>
+                </div>
+                <div class="block">
+                    <h4>2015 - 2017</h4>
+                    <h3>Study at UEH</h3>
+                    <p>Study Business Adminstation</p>
+                </div>
+                <div class="block">
+                    <h4>2013 - 2015</h4>
+                    <h3>Study at Vietnam Aviation Academy</h3>
+                    <p>Study Business Adminstation</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!--Works-->
+    <section id="works" class="dark">
+        <div class="inner-width">
+            <h1 class="section-title">Projects</h1>
+            <div class="works">
+                <a href="https://demo-shop-frontend.onrender.com/" class="work" target="_blank">
+                    <img src="./images/works/shop24h.png" alt="">
+                    <div class="info">
+                        <h3>Karl Fashion</h3>
+                        <div class="cat">E-commerce</div>
+                        <div class="cat">ReactJs</div>
+                        <div class="cat">Click to see...</div>
+                    </div>
+                </a>
+                <a href="https://calm-cranachan-b1dec4.netlify.app/" class="work" target="_blank">
+                    <img src="./images/works/furniture.png" alt="">
+                    <div class="info">
+                        <h3>Furniture</h3>
+                        <div class="cat">Landing page</div>
+                        <div class="cat">HTML, CSS</div>
+                        <div class="cat">Click to see...</div>
+
+                    </div>
+                </a>
+                <a href="https://beautiful-parfait-470847.netlify.app/" class="work">
+                    <img src="./images/works/lenlove.png" alt="">
+                    <div class="info">
+                        <h3>Work Title</h3>
+                        <div class="cat">Shoe</div>
+                        <div class="cat">HTML, CSS</div>
+                        <div class="cat">Click to see...</div>
+
+                    </div>
+                </a>
+                <a href="https://dashboard-frontend-fvul.onrender.com/dashboard" class="work">
+                    <img src="./images/works/dashboard.png" alt="">
+                    <div class="info">
+                        <h3>Work Title</h3>
+                        <div class="cat">Camera</div>
+                        <div class="cat">ReactJs</div>
+                        <div class="cat">Click to see...</div>
+
+                    </div>
+                </a>
+                <a href="https://course365-frontend.onrender.com/" class="work">
+                    <img src="./images/works/course365.png" alt="">
+                    <div class="info">
+                        <h3>Work Title</h3>
+                        <div class="cat">Music, Headset</div>
+                        <div class="cat">ReactJs</div>
+                        <div class="cat">Click to see...</div>
+
+                    </div>
+                </a>
+                <a href="https://pizza365.onrender.com/" class="work">
+                    <img src="./images/works/pizza365.png" alt="">
+                    <div class="info">
+                        <h3>Work Title</h3>
+                        <div class="cat">Music, Headset</div>
+                        <div class="cat">ReactJs</div>
+                        <div class="cat">Click to see...</div>
+
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+    <!--Contact-->
+    <section id="contact">
+        <div class="inner-width">
+            <h1 class="section-title">Get in touch</h1>
+            <div class="contact-info">
+                <div class="item">
+                    <i class="fas fa-mobile-alt"></i> <a class="a__phonecall" href="tel: 909489406">0909489406</a>
+                </div>
+                <div class="item">
+                    <i class="fas fa-envelope"></i>vnphuong2512@gmail.com
+                </div>
+                <div class="item">
+                    <i class="fas fa-map-marker-alt"></i>Dong Nai, VietNam
+                </div>
+            </div>
+            <form action="" class="contact-form" id='contact-form'>
+                <input type="text" class="name" placeholder="Your name" id='contact-name' name='name'>
+                <input type="text" class="email" placeholder="Your email" id="contact-email" name='email'>
+                <input type="text" class="address" placeholder="Your address" id="'contact-address" name='address'>
+                <textarea name="" class="txt-message" id='contact-message' name='message'></textarea>
+                <input type="submit" value="Send Message" class="btn" id='submit-btn'>
+            </form>
+        </div>
+    </section>
+    <!--Footer-->
+    <footer>
+        <div class="inner-width">
+            <div class="copyright">
+                &copy; 2022 | Created & Designed By <a href="#"> Selina</a>
+            </div>
+            <div class="sm">
+                <a href="#" class="fab fa-facebook-f"></a>
+                <a href="#" class="fab fa-instagram"></a>
+                <a href="#" class="fab fa-twitter"></a>
+                <a href="#" class="fab fa-linkedin-in"></a>
+            </div>
+        </div>
+    </footer>
+    <!--Go top-->
+    <button class="goTop fas fa-arrow-up"></button>
+</body>
+
+
+</html>

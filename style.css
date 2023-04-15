@@ -1,0 +1,683 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-family: 'Ubuntu', sans-serif;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+:root {
+    --main-icon-color: #ff7979;
+    --background-color1: #fff;
+    --background-color2: #22a6b3;
+    --background-color3: #353b48;
+    --color1: #111;
+    --color2: #444;
+    --color3: #ddd;
+    --color4: #f1f1f1;
+}
+::selection{
+    background-color: var(--background-color2);
+}
+::-webkit-scrollbar{
+    width: 10px;
+    background-color: var(--color4);
+}
+::-webkit-scrollbar-thumb{
+    background-color: var(--background-color2);
+}
+
+.navbar {
+    position: fixed;
+    width: 100%;
+    padding: 30px 0;
+    top: 0;
+    z-index: 999;
+    transition: .3s linear;
+}
+
+.inner-width {
+    max-width: 1300px;
+    margin: auto;
+    padding: 0 40px;
+}
+
+.navbar .inner-width {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 44px;
+    height: 32px;
+    background-image: url(./images/white-logo.png);
+    background-size: contain;
+}
+
+.menu-toggle {
+    background: none;
+    width: 44px;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    outline: none;
+    z-index: 999;
+}
+
+.menu-toggle span {
+    display: block;
+    height: 3px;
+    background-color: var(--background-color1);
+    margin: 6px;
+    position: relative;
+    transition: .3s linear;
+}
+
+.navbar-menu a {
+    color: var(--background-color1);
+    font-size: 15px;
+    font-weight: 500;
+    margin-left: 30px;
+    transition: .2s linear;
+}
+
+.navbar-menu a:hover {
+    color: var(--background-color2) !important;
+}
+
+#home {
+    height: 100vh;
+    min-height: 500px;
+    background: url(./images/bg.jpg) no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+#home .inner-width {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    text-align: center;
+}
+
+#home .content {
+    width: 100%;
+    color: var(--background-color1);
+}
+
+#home .content h1 {
+    font-size: 60px;
+    margin-bottom: 60px;
+}
+
+#home .content h1::after {
+    content: "Phuong";
+    animation: textname 10s linear infinite;
+}
+@keyframes textname {
+    50% {
+        content: 'A developer';
+    }
+
+    75% {
+        content: 'Full-stack';
+    }
+}
+section {
+    padding: 100px 0;
+    background-color: var(--color3);
+}
+
+.section-title {
+    text-align: center;
+    margin: 0 auto 80px auto;
+    font-size: 26px;
+    padding-bottom: 20px;
+    color: var(--color1);
+    border-bottom: 5px solid var(--color1);
+    max-width: 400px;
+    position: relative;
+
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 15px;
+    background-color: var(--background-color2);
+    top: 44px;
+    left: 46%
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.about-pic {
+    width: 200px;
+    height:200px;
+    border-radius: 50%;
+    margin-right: 100px;
+    object-fit: cover;
+}
+
+/*make the introduce section get whole rest area*/
+.about-text {
+    flex: 1;
+}
+
+.about-text h3 {
+    margin: 10px 0;
+    color: var(--color2);
+    font-size: 16px;
+}
+
+/*create dot after span 1, 2*/
+.about-text h3 span:nth-child(2)::before,
+.about-text h3 span:nth-child(3)::before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    background-color: var(--color2);
+    display: inline-block;
+    border-radius: 50%;
+    margin: 0 14px;
+
+}
+
+.about-text p {
+    font-size: 17px;
+    text-align: justify;
+    line-height: 26px;
+    margin-top: 20px;
+}
+
+/* parent element display flex and wrap*/
+.skills {
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/*each children get 50% width of parent and will be wrap if over 100%*/
+.skill {
+    width: calc(50% - 20px);
+    margin: 15px 0;
+}
+
+/*set skill info stay at the same line with skill's name*/
+.skill-info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.skill-bar {
+    height: 3px;
+    background-color: var(--color3);
+    margin-top: 14px;
+    position: relative;
+}
+
+.skill-bar::after {
+    content: '';
+    position: absolute;
+    height: 6px;
+    background-color: var(--background-color2);
+    bottom: 0;
+}
+
+/*stay same element with skill-bar, skill-bar are group of skill but the width diffrent on each skill*/
+.html::after {
+    width: 90%;
+}
+
+.javascript::after {
+    width: 80%;
+}
+
+.jquery::after {
+    width: 80%;
+}
+
+.css::after {
+    width: 80%;
+}
+
+.bootstrap::after {
+    width: 80%;
+}
+
+.reactjs::after {
+    width: 80%;
+}
+
+section.dark {
+    background-color: #353b48;
+}
+
+section.dark .section-title {
+    color: var(--color4);
+    border-bottom: 5px solid var(--color4);
+}
+
+section.dark .section-title::after {
+    border: 2px solid var(--background-color3);
+}
+
+/*separate each chidren evenly rely on space-between and wrap children*/
+.services {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/*separate 3 col, so the width ~ 33%/100%. set border to see clear what happen*/
+.service {
+    width: calc(33% - 20px);
+    text-align: center;
+    border: 1px solid var(--background-color2);
+    margin: 20px 0;
+    border-radius: 6px;
+    padding: 40px 20px;
+    color: var(--color4);
+    cursor: pointer;
+    transition: .3s linear;
+}
+
+.service .icon {
+    color: var(--background-color2);
+    font-size: 40px;
+    margin-bottom: 20px;
+    transition: .3s linear;
+}
+
+.service h4 {
+    font-size: 16px;
+    margin-bottom: 6px;
+}
+
+.service:hover {
+    background-color: var(--background-color2);
+}
+
+.service:hover .icon {
+    color: var(--color4);
+}
+
+
+.sm a {
+    color: var(--color4);
+    font-size: 22px;
+    margin: 0 10px;
+    transition: .2s linear;
+}
+
+.sm a:hover {
+    color: var(--background-color2);
+    font-size: 30px;
+}
+
+/*set for sticky class*/
+.sticky {
+    background-color: var(--color4);
+    padding: 18px 0;
+}
+
+.sticky .logo {
+    background-image: url(./images/black-logo.png);
+}
+
+.sticky .navbar-menu a {
+    color: var(--color1);
+}
+
+.sticky .menu-toggle span {
+    background-color: var(--color1);
+}
+
+/*set for sticky class*/
+#home .buttons {
+    margin-top: 60px;
+}
+
+#home .buttons a {
+    display: inline-block;
+    margin: 15px 30px;
+    color: var(--background-color2);
+    font-size: 15px;
+    font-weight: 500;
+    width: 180px;
+    border: 1px solid;
+    padding: 14px 0;
+    border-radius: 6px;
+    transition: .2s linear;
+}
+
+#home .buttons a:nth-child(2),
+#home .buttons a:hover {
+    background-color: var(--background-color2);
+    color: var(--color4);
+    border: var(--background-color2);
+}
+
+/*Education & experiences*/
+.time-line,
+.works {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.block {
+    width: calc(50% - 20px);
+    background-color: var(--color4);
+    border: 1px solid var(--color3);
+    margin: 10px 0;
+    padding: 30px;
+    position: relative;
+}
+
+.block::before {
+    content: '';
+    position: absolute;
+    width: 1px;
+    height: 120%;
+    background-color: var(--color4);
+    left: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.block::after {
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    background-color: var(--background-color2);
+    left: -28px;
+    top: 30%;
+    border-radius: 50%;
+}
+
+.block h3 {
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+.block p {
+    font-size: 15px;
+    color: var(--color2);
+}
+
+/**/
+/*works*/
+
+.work {
+    width: calc(33% - 10px);
+    overflow: hidden;
+    border-radius: 6px;
+    margin: 10px 0;
+    cursor: pointer;
+    position: relative;
+}
+
+.work img {
+    width: 100%;
+    height: 100%;
+    transition: .4s linear;
+}
+
+.work::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-color: #48dbfbcc;
+    transition: .3s linear;
+    opacity: 0;
+    transform: scale(0);
+}
+
+.work .info {
+    position: absolute;
+    z-index: 2;
+    bottom: 50px;
+    left: 40px;
+    color: var(--color4);
+    transition: .2s linear;
+    opacity: 0;
+}
+
+/*hover image, will be bigger 60% and rotate 25deg*/
+.work:hover img {
+    transform: scale(1.6) rotate(25deg);
+}
+
+.work:hover::before,
+.work:hover .info {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/*works*/
+/*Contact*/
+.contact-info{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 60px;
+}
+.contact-info .item{
+    width: calc(33% - 20px);
+    height: 160px;
+    background-color: var(--background-color3);
+    color: var(--color4);
+    border-radius: 4px;
+    cursor: pointer;
+    transition: .3s linear;
+    text-align: center;
+}
+.contact-info i{
+    display: block;
+    font-size: 40px;
+    line-height: 120px;
+    height: 100px;
+}
+.contact-info .item:hover{
+    background-color: var(--background-color2);
+}
+.contact-form{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.contact-form input, .contact-form textarea{
+    width: 100%;
+    height: 50px;
+    margin: 10px 0;
+    background-color: var(--background-color3);
+    border: none;
+    outline: none;
+    font-size: 16px;
+    padding: 20px;
+    border-radius: 4px;
+    color: var(--color4);
+}
+.name, .email{
+    max-width: calc(50% - 10px);
+}
+.txt-message{
+    min-height: 200px;
+    resize: vertical;
+}
+.contact-form .btn{
+    width: 180px;
+    font-size: 16px;
+    border-radius: 4px;
+    text-align: center;
+    padding: 0;
+    background-color: transparent;
+    color: var(--background-color2);
+    border: 2px solid var(--background-color2);
+    margin-left: auto;
+    cursor: pointer;
+    line-height: 20px;
+    transition: .3s linear;
+}
+.contact-form .btn:hover{
+    background-color: var(--background-color2);
+    color: var(--color4);
+}
+.a__phonecall{
+    color: white
+}
+/*Contact*/
+/*footer*/
+footer{
+    background: url(./images/bg.jpg) no-repeat center;
+    background-size: cover;
+    color: var(--color4);
+    padding: 80px 0;
+    text-align: center;
+
+}
+.copyright{
+    margin-bottom: 20px;
+    font-size: 15px;
+}
+.copyright a{
+    font-size: 16px;
+    color: var(--background-color2);
+    font-weight: 500;
+}
+.goTop{
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    width: 40px;
+    height: 40px;
+    z-index: 999;
+    border: none;
+    border-radius: 6px;
+    background-color: var(--background-color2);
+    color: var(--color4);
+    cursor: pointer;
+    outline: none;
+    display: none;
+}
+
+/*make layout responsive, current min width 990px can't see the toggle icon on nav bar*/
+@media screen and (min-width: 990px) {
+    .menu-toggle span {
+        display: none;
+    }
+}
+
+/*make layout responsive*/
+@media screen and (max-width: 980px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .navbar-menu {
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        background-color: var(--background-color3);
+        top: 0;
+        /* lam cho nav bi an, muon hien thi lai tao class active va cho right = 0*/
+        right: -100%;
+        max-width: 400px;
+        padding: 80px 50px;
+        transition: .3s linear;
+    }
+
+    .navbar-menu a {
+        display: block;
+        font-size: 30px;
+        margin: 30px 0;
+    }
+
+    .sticky .navbar-menu {
+        background-color: var(--color4);
+    }
+
+    .navbar-menu.active {
+        right: 0;
+    }
+
+    .menu-toggle.active span:nth-child(1) {
+        transform: rotate(-45deg);
+        top: 4px;
+    }
+
+    .menu-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-toggle.active span:nth-child(3) {
+        transform: rotate(45deg);
+        bottom: 14px;
+    }
+
+    .inner-width {
+        max-width: 800px;
+    }
+
+    .about-pic {
+        margin: 0 auto 60px;
+        
+    }
+
+    .about-text {
+        flex: 100%;
+        text-align: center;
+    }
+
+    .service {
+        width: calc(50% - 20px);
+    }
+
+    .block {
+        width: calc(100% - 20px);
+        margin-left: auto;
+    }
+    .work{
+        width: calc(50% - 10px);
+    }
+    .contact-info .item{
+        width: 100%;
+        margin: 10px 0;
+    }
+
+}
+
+/*make layout responsive*/
+@media screen and (max-width: 600px) {
+    .inner-width {
+        padding: 0 20px;
+    }
+
+    .skill {
+        width: 100%;
+    }
+
+    .service {
+        width: 100%;
+    }
+    .work{
+        width: 100%;
+    }
+    .name, .email{
+        max-width: 100%;
+    }
+}
