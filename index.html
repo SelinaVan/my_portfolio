@@ -19,14 +19,9 @@
     <!--Add popup-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
-    <script src="./index.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
     </script>
-    <script type="text/javascript">
-        (function () {
-            emailjs.init("LXTb8monY8lvhV9Wf");
-        })();
-    </script>
+
 </head>
 
 <body>
@@ -42,7 +37,7 @@
             <div class="navbar-menu ">
                 <a href="#">Home</a>
                 <a href="#about">About</a>
-                <!-- <a href="#services">Services</a> -->
+                <a href="#services">Certificate</a>
                 <a href="#education">Education</a>
                 <a href="#works">Projects</a>
                 <a href="#contact">Contact</a>
@@ -69,7 +64,7 @@
         </div>
     </section>
     <!--about-->
-    <section id="about">
+    <!-- <section id="about">
         <div class="inner-width">
             <h1 class="section-title">About</h1>
             <div class="about-content">
@@ -132,45 +127,16 @@
 
 
             </div>
-    </section>
-    <!--Services-->
-    <!-- <section id="services" class="dark">
+    </section> -->
+    <!--Works-->
+    <section id="works" class="dark">
         <div class="inner-width">
-            <h1 class="section-title">Services</h1>
-            <div class="services">
-                <div class="service">
-                    <i class="fa-sharp fa-solid fa-paintbrush icon"></i>
-                    <h4>Design</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, maxime.</p>
-                </div>
-                <div class="service">
-                    <i class="fa-sharp fa-solid fa-pager icon"></i>
-                    <h4>Build a website</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, maxime.</p>
-                </div>
-                <div class="service">
-                    <i class="fa-sharp fa-solid fa-database icon"></i>
-                    <h4>Manage Database</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, maxime.</p>
-                </div>
-                <div class="service">
-                    <i class="fa-sharp fab fa-android icon"></i>
-                    <h4>Android Apps</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, maxime.</p>
-                </div>
-                <div class="service">
-                    <i class="fa-sharp fa-solid fa-paintbrush icon"></i>
-                    <h4>UI Design</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, maxime.</p>
-                </div>
-                <div class="service">
-                    <i class="fa-sharp fa-solid fa-keyboard icon"></i>
-                    <h4>Edit Text</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, maxime.</p>
-                </div>
+            <h1 class="section-title">Projects</h1>
+            <div class="works" id='works-inner'>
+    
             </div>
         </div>
-    </section> -->
+    </section>
     <!--Education-->
     <section id="education">
         <div class="inner-width">
@@ -211,12 +177,13 @@
             </div>
         </div>
     </section>
-    <!--Works-->
-    <section id="works" class="dark">
+   
+    <!--Services-->
+    <section id="services" class="dark">
         <div class="inner-width">
-            <h1 class="section-title">Projects</h1>
-            <div class="works" id='works-inner'>
-            
+            <h1 class="section-title">Certificate</h1>
+            <div class="services" id="services-inner">
+    
             </div>
         </div>
     </section>
@@ -260,6 +227,12 @@
     </footer>
     <!--Go top-->
     <button class="goTop fas fa-arrow-up"></button>
+    <script src="./index.js" defer></script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("LXTb8monY8lvhV9Wf");
+        })();
+    </script>
 </body>
 
 

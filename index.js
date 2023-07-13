@@ -1,8 +1,8 @@
 $(document).ready(function () {
-    const API_URL = 'https://portfolio-backend-kdud.onrender.com/projects';
+    const API_URL = 'https://portfolio-backend-kdud.onrender.com/';
     //render function when load page
     callApiGetAllProjects()
-
+    callApiGetAppCertificate()
     // set background light when scroll follow the height over 20
     $(window).scroll(function () {
         if (this.scrollY > 20) {
@@ -43,11 +43,11 @@ $(document).ready(function () {
             alert("Sorry, the error happened. Please try again");
         }
     }
-   
+
     // function download cv
     $('.download_cv').click(function () {
-        const fileName = 'CV_Van_Ngoc_Phuong_Fullstack_Developer.pdf'
-        const filePath = './CV_Van_Ngoc_Phuong_Fullstack_Developer.pdf'
+        const fileName = 'Van_Ngoc_Phuong_Web_developer.pdf'
+        const filePath = './Van_Ngoc_Phuong_Web_developer.pdf'
         const link = document.createElement('a')
         link.setAttribute('href', fileName)
         link.setAttribute('download', filePath)
@@ -62,13 +62,23 @@ $(document).ready(function () {
         paramContact.message = $('#contact-message').val()
         $.each(data, function (_, field) {
             paramContact[field.name] = field.value
-  
+
         })
     }
     // render project dynamic
     function renderProject(paramData) {
-        const project = paramData.map(item => {
-            return `
+        let project
+        if (!paramData) {
+            project = Array.from({ length: 3 }, (_, i) => `
+            <div class="works-skeleton">
+              <div  class="work_annimation" >
+              </div>
+            </div>
+        `);
+        }
+        else {
+            project = paramData.map(item => {
+                return `
                 <a href=${item.link} class="work" target="_blank">
                     <img src=${item.image} alt=${item.title}>
                     <div class="info">
@@ -79,25 +89,64 @@ $(document).ready(function () {
                     </div>
                 </a>
         `
-        })
+            })
+        }
         $('#works-inner').append(project)
     }
     // function call api get data
     function callApiGetAllProjects() {
         $.ajax({
             type: 'GET',
-            url: API_URL,
+            url: API_URL + 'projects',
             dataType: 'json',
             async: false,
             success: function (res) {
                 renderProject(res)
             },
-            error: function (err){
-               
+            error: function (err) {
+                renderProject([])
             }
         })
     }
-})
+    function renderCertificate(paramData) {
+        let certificate;
+        if (!paramData) {
+            certificate = Array.from({ length: 3 }, (_, i) => `
+            <div class="works-skeleton">
+              <div  class="work_annimation" >
+              </div>
+            </div>
+        `);
+        }
+        else {
+            certificate = paramData.map(item => {
+                return `
+                 <div class="service">
+                    <a href=${item.link}  target="_blank">
+                        <img src=${item.image} alt=${item.name}>
+                    </a>
+                </div>
+        `
+            })
+            $('#services-inner').append(certificate)
+        }
+    }
+        // call api get all certificate
+        function callApiGetAppCertificate() {
+            $.ajax({
+                type: 'GET',
+                url: API_URL + 'certificates',
+                dataType: 'json',
+                async: false,
+                success: function (res) {
+                    renderCertificate(res)
+                },
+                error: function (err) {
+                    renderCertificate([])
+                }
+            })
+        }
+    })
  /// make the photo with popup effect
     // $('.works').magnificPopup({
     //     delegate: 'a',
