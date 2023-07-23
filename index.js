@@ -1,8 +1,13 @@
+import certs from './assets/certificates/cert.json' assert {type: 'json'};
+import projects from './assets/projects/projects.json' assert {type: 'json'};
+
 $(document).ready(function () {
-    const API_URL = 'https://portfolio-backend-kdud.onrender.com/';
+    // const API_URL = 'https://portfolio-backend-kdud.onrender.com/';
+    renderProject(projects);
+    renderCertificate(certs);
     //render function when load page
-    callApiGetAllProjects()
-    callApiGetAppCertificate()
+    // callApiGetAllProjects()
+    // callApiGetAppCertificate()
     // set background light when scroll follow the height over 20
     $(window).scroll(function () {
         if (this.scrollY > 20) {
@@ -47,10 +52,10 @@ $(document).ready(function () {
     // function download cv
     $('.download_cv').click(function () {
         const fileName = 'Van_Ngoc_Phuong_Web_developer.pdf'
-        const filePath = './Van_Ngoc_Phuong_Web_developer.pdf'
+        const filePath = './assets/Van_Ngoc_Phuong_Web_developer.pdf'
         const link = document.createElement('a')
-        link.setAttribute('href', fileName)
-        link.setAttribute('download', filePath)
+        link.setAttribute('href', filePath)
+        link.setAttribute('download', fileName)
         link.style.display = 'none'
         document.body.appendChild(link)
         link.click()
@@ -94,20 +99,20 @@ $(document).ready(function () {
         $('#works-inner').append(project)
     }
     // function call api get data
-    function callApiGetAllProjects() {
-        $.ajax({
-            type: 'GET',
-            url: API_URL + 'projects',
-            dataType: 'json',
-            async: false,
-            success: function (res) {
-                renderProject(res)
-            },
-            error: function (err) {
-                renderProject([])
-            }
-        })
-    }
+    // function callApiGetAllProjects() {
+    //     $.ajax({
+    //         type: 'GET',
+    //         url: API_URL + 'projects',
+    //         dataType: 'json',
+    //         async: false,
+    //         success: function (res) {
+    //             renderProject(res)
+    //         },
+    //         error: function (err) {
+    //             renderProject([])
+    //         }
+    //     })
+    // }
     function renderCertificate(paramData) {
         let certificate;
         if (!paramData) {
@@ -131,27 +136,19 @@ $(document).ready(function () {
             $('#services-inner').append(certificate)
         }
     }
-        // call api get all certificate
-        function callApiGetAppCertificate() {
-            $.ajax({
-                type: 'GET',
-                url: API_URL + 'certificates',
-                dataType: 'json',
-                async: false,
-                success: function (res) {
-                    renderCertificate(res)
-                },
-                error: function (err) {
-                    renderCertificate([])
-                }
-            })
-        }
-    })
- /// make the photo with popup effect
-    // $('.works').magnificPopup({
-    //     delegate: 'a',
-    //     type: 'image',
-    //     gallery: {enabled: true}
-    // })
-    // gotop button
-    // get width of skill bard
+    // call api get all certificate
+    // function callApiGetAppCertificate() {
+    //     $.ajax({
+    //         type: 'GET',
+    //         url: API_URL + 'certificates',
+    //         dataType: 'json',
+    //         async: false,
+    //         success: function (res) {
+    //             renderCertificate(res)
+    //         },
+    //         error: function (err) {
+    //             renderCertificate([])
+    //         }
+    //     })
+    // }
+})

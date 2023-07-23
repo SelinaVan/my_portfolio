@@ -53,7 +53,7 @@ html{
 .logo {
     width: 44px;
     height: 32px;
-    background-image: url(./images/white-logo.png);
+    /* background-image: url(./images/white-logo.png); */
     background-size: contain;
 }
 
@@ -336,7 +336,7 @@ section.dark .section-title::after {
 }
 
 .sticky .logo {
-    background-image: url(./images/black-logo.png);
+    /* background-image: url(./images/black-logo.png); */
 }
 
 .sticky .navbar-menu a {
