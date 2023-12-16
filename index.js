@@ -46,7 +46,7 @@ const projects = [
         "description": "HTML, CSS"
     },
     {
-        "link": "https://timesheet.allxone.vn/coreui-checkintool/#/login",
+        "link": "https://timesheet.allxone.vn/#/login",
         "image": "./images/works/checkin.png",
         "name": "Check in App",
         "description": "Angular, CoreUI, Bootstrap, Laravel, PhpMyAdmin, Php",
@@ -73,13 +73,13 @@ const projects = [
         "name": "AdminLTE",
         "description": "ReactJs"
     },
-    {
-        "link": "https://course365-frontend.onrender.com/",
-        "image": "https://storage.googleapis.com/shop24h-7d406.appspot.com/images/course365_c86475e1-4bdd-4ed3-abe3-875ce02df2de.png?GoogleAccessId=firebase-adminsdk-rygp4%40shop24h-7d406.iam.gserviceaccount.com&Expires=1742169600&Signature=o%2F0ATMBv1g8uc8cjXcgPDHt6SYe7Z3SYrou8RUhmhLNJEISYWVS8cKZi1WP4Hg0TpR%2FKmnp9K3pHbIm0JgDWy%2FBsPIxpyTM7eSWF%2F05%2FwXn2XQfxjNaY57vYVYfAoMcDhbL8yYkseKQuNfAYx2ID28P205vVmHxS4pU6irQD2tW0XdgRf7LbrOswi4vxTsIcz0XdxjaXPOVn2FzFoi8JW1lypqxLGc2TtSt0BSxBUJZaUHQzEBM%2Fq1ZobuCYg1zbSZY9Ydj6GXqzRnFSp6NMEzBPpwl0mbgyt2PIptzvryzLEMoVy5ir4W%2FCfNVtrKUFu265GAa0Yt6FjHJP%2FHBhbA%3D%3D",
-        "title": "Course 365",
-        "name": "Landing page",
-        "description": "ReactJs"
-    },
+    // {
+    //     "link": "https://course365-frontend.onrender.com/",
+    //     "image": "https://storage.googleapis.com/shop24h-7d406.appspot.com/images/course365_c86475e1-4bdd-4ed3-abe3-875ce02df2de.png?GoogleAccessId=firebase-adminsdk-rygp4%40shop24h-7d406.iam.gserviceaccount.com&Expires=1742169600&Signature=o%2F0ATMBv1g8uc8cjXcgPDHt6SYe7Z3SYrou8RUhmhLNJEISYWVS8cKZi1WP4Hg0TpR%2FKmnp9K3pHbIm0JgDWy%2FBsPIxpyTM7eSWF%2F05%2FwXn2XQfxjNaY57vYVYfAoMcDhbL8yYkseKQuNfAYx2ID28P205vVmHxS4pU6irQD2tW0XdgRf7LbrOswi4vxTsIcz0XdxjaXPOVn2FzFoi8JW1lypqxLGc2TtSt0BSxBUJZaUHQzEBM%2Fq1ZobuCYg1zbSZY9Ydj6GXqzRnFSp6NMEzBPpwl0mbgyt2PIptzvryzLEMoVy5ir4W%2FCfNVtrKUFu265GAa0Yt6FjHJP%2FHBhbA%3D%3D",
+    //     "title": "Course 365",
+    //     "name": "Landing page",
+    //     "description": "ReactJs"
+    // },
     {
         "link": "https://pizza365.onrender.com/",
         "image": "https://storage.googleapis.com/shop24h-7d406.appspot.com/images/pizza365_c48e3c3e-990a-4821-8c53-ec62548bebdc.png?GoogleAccessId=firebase-adminsdk-rygp4%40shop24h-7d406.iam.gserviceaccount.com&Expires=1742169600&Signature=Yy1QGrXC2MDFloVCnLTeEBz27AtL7jBE0aSHctTViRYRAIGV77vi84ld63MH8i7G6k6VMvSH9Kq4rGHaulQnNr2aRHDkoi9zfy%2FKgCdcW8nffQWA5TFPeZlNJb4vomysl8cB9%2F4ucs49KwMsRDsaKjb%2FZxHNCoYsM%2F90OfTSew9FIi5xudv%2FHKIvjC6Mmvn6iELvTAW2ICzEgSE6%2FGKMNeI%2BHwdvj15%2FRfZ4NJWyDQamcciMZv%2FUa%2BdgHz5qj7%2FfbLVjkeQRnqCscveECyoTZilmHuvbUCmwOMDfCP42JlXQ3svVPXVdTHQ80KlEKVCykn3bCmmre%2FjGYogjyUwCNQ%3D%3D",
